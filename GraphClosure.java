@@ -3,7 +3,7 @@
 
 public class GraphClosure
 {
-    final static int V = 5; //Number of vertices in a graph
+    final static int V = 4; //Number of vertices in a graph
 
     // Prints transitive closure of graph[][] using Floyd
     // Warshall algorithm
@@ -82,11 +82,11 @@ public class GraphClosure
         \|/        |
         (1)------->(2)
            3           */
-        int[][] graph = new int[][]{  {1, 0, 0, 1, 0},
-                                      {0, 1, 0, 0, 0},
-                                      {0, 0, 0, 1, 1},
-                                      {1, 0, 0, 0, 0},
-                                      {0, 1, 0, 0, 1}
+        int[][] graph = new int[][]{  {0, 1, 0, 0},
+                                      {1, 0, 1, 0},
+                                      {0, 0, 0, 1},
+                                      {0, 0, 0, 0},
+
         };
 
         // Print the solution
