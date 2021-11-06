@@ -1,14 +1,10 @@
-// Program for transitive closure
-// using Floyd Warshall Algorithm
-
 public class GraphClosure
 {
     final static int V = 4; //Number of vertices in a graph
 
     // Prints transitive closure of graph[][] using Floyd
     // Warshall algorithm
-    void transitiveClosure(int[][] graph)
-    {
+    void transitiveClosure(int[][] graph) {
         /* reach[][] will be the output matrix that will finally
            have the shortest  distances between every pair of
            vertices */
@@ -56,14 +52,11 @@ public class GraphClosure
     /* A utility function to print solution */
     void printSolution(int[][] reach)
     {
-        System.out.println("Following matrix is transitive closure"+
-                " of the given graph");
+        System.out.println("Following matrix is transitive closure"+ " of the given graph");
         for (int i = 0; i < V; i++)
         {
             for (int j = 0; j < V; j++) {
-                if ( i == j)
-                    System.out.print("1 ");
-                else
+
                     System.out.print(reach[i][j]+" ");
             }
             System.out.println();
@@ -85,7 +78,7 @@ public class GraphClosure
         int[][] graph = new int[][]{  {0, 1, 0, 0},
                                       {1, 0, 1, 0},
                                       {0, 0, 0, 1},
-                                      {0, 0, 0, 0},
+                                      {0, 0, 0, 0}
 
         };
 
@@ -94,4 +87,3 @@ public class GraphClosure
         g.transitiveClosure(graph);
     }
 }
-// This code is contributed by Aakash Hasija
